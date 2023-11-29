@@ -67,7 +67,7 @@ def enviar_y_recibir_imagen(imagen, host, puerto):
         print(f"IMG recibida de Servidor: {ruta_recibido_servidor}")
 
 
-
+        
         
 
 # Ruta de la imagen original
