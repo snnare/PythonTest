@@ -3,9 +3,9 @@ from PIL import Image
 from io import BytesIO
 
 # Función para recibir la imagen, guardarla, rotarla 90 grados y enviarla de vuelta al cliente
-def recibir_rotar_y_reenviar_imagen(puerto):
+def recibir_rotar_y_reenviar_imagen(ip_servidor, puerto):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind(('127.0.0.1', puerto))
+        s.bind((ip_servidor, puerto))
         s.listen()
         print(f"Esperando la conexión en el puerto {puerto}...")
         conn, addr = s.accept()
@@ -81,12 +81,9 @@ def recibir_rotar_y_reenviar_imagen(puerto):
                 conn.sendall(imagen_data_rotada)
                 print("Imagen  enviada al cliente")
 
-            
-            
 
-
-        
-
+# Ip del servidor 
+ip_servidor = "192.168.100.45"
 # Puerto en el que el servidor escuchará
 puerto_servidor = 12345
 
