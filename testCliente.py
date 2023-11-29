@@ -41,7 +41,7 @@ def enviar_y_recibir_imagen(imagen, host, puerto):
         print(f"IMG recibida de Servidor: {ruta_recibido_servidor}")
 
         # ====== Envia por 2da Vez
-        imagen2da =  imagen_recibida
+        imagen2da =  Image.open(ruta_recibido_servidor)
         imagen_rotada = imagen2da.rotate(90)
         # Carga la imagen  y envia el tamanio del archivo
         tamano_archivo = len(open(imagen_rotada, "rb").read())
