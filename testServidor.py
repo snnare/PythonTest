@@ -48,26 +48,7 @@ def recibir_rotar_y_reenviar_imagen(ip_servidor, puerto):
                 conn.sendall(str(tamano_archivo_rotada).encode())
                 conn.sendall(imagen_data_rotada)
                 print("Imagen  enviada al cliente")
-
-            # ====== Recibe por 2da Vez
-            # Recibir el tamaño del archivo
-            tamano_archivo02 = int(conn.recv(4096).decode())
-            
-            # Recibir la imagen
-            imagen_data = b''
-            while len(imagen_data) < tamano_archivo02:
-                imagen_data += conn.recv(4096)
-
-            # Convertir los datos recibidos en una imagen
-            imagen_recibida2 = Image.open(BytesIO(imagen_data))
-
-            # Guardar la imagen recibida en la ruta "RecibidasDeCliente"
-            ruta_recibidas_cliente = "RecibidoDeCliente/imagenDeCliente02.png"
-            imagen_recibida2.save(ruta_recibidas_cliente)
-            print(f"IMG recibida de Cliente: {ruta_recibidas_cliente}")
-
-
-
+         
 
 ip_servidor = "192.168.100.45"
 # Puerto en el que el servidor escuchará
