@@ -50,7 +50,7 @@ def recibir_rotar_y_reenviar_imagen(ip_servidor, puerto):
                 print("Imagen  enviada al cliente")
 
 
-ip_servidor = "127.0.0.1"
+ip_servidor = "192.168.100.45"
 # Puerto en el que el servidor escuchará
 puerto_servidor = 12345
 

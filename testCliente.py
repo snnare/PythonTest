@@ -49,7 +49,7 @@ imagen_original = Image.open(ruta_original)
 imagen_rotada = imagen_original.rotate(90)
 
 # Especificar la dirección IP y el puerto del servidor
-direccion_servidor = "127.0.0.1"  # Cambia a la dirección IP del servidor si es diferente
+direccion_servidor = "192.168.100.45"  # Cambia a la dirección IP del servidor si es diferente
 puerto_servidor = 12345  # Cambia al puerto en el que el servidor está escuchando
 
 # Enviar la imagen rotada al servidor y recibirla de vuelta
