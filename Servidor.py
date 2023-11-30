@@ -83,9 +83,9 @@ def recibir_rotar_y_reenviar_imagen(ip_servidor, puerto):
 
 
 # Ip del servidor 
-ip_servidor = "192.168.100.45"
+ip_servidor = "192.168.85.138"
 # Puerto en el que el servidor escuchará
 puerto_servidor = 12345
 
 # Iniciar el servidor
-recibir_rotar_y_reenviar_imagen(puerto_servidor)
+recibir_rotar_y_reenviar_imagen(ip_servidor,puerto_servidor)
